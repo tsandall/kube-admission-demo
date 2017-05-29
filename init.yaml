@@ -1,0 +1,20 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: production
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: nginx-privileged
+  name: nginx-privileged
+  namespace: production
+spec:
+  hostPID: true
+  hostIPC: true
+  containers:
+  - image: nginx:1.10
+    name: nginx-privileged
+    securityContext:
+      privileged: true

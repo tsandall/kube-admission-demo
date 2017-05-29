@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: nginx-pinned
+  name: nginx-pinned
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-pinned
+  template:
+    metadata:
+      labels:
+        app: nginx-pinned
+    spec:
+      containers:
+      - image: nginx:1.10
+        name: nginx-pinned

@@ -1,6 +1,6 @@
 # Fine-grained Declarative Admission Control using webhooks and OPA
 
-This repo shows how you can enforce admission control policies in Kubernetes using OPA.
+This repo shows how you can enforce admission control policies in Kubernetes using [the Open Policy Agent project](https://github.com/open-policy-agent/opa).
 
 The examples in this repo rely on upcoming webhook support in Kubernetes. Check out [PR #46316](https://github.com/kubernetes/kubernetes/pull/46316) for details on the status of webhook support.
 
